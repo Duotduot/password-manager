@@ -3,7 +3,7 @@ from cryptography.fernet import Fernet
 
 PASSWORD_FILE = 'passwords.json'
 
-# User Interface. Inputs 
+# User Interface which includes input.
 def main():
     print("Welcome to the Password Manager")
     print("Please choose an option from the menu below:")
