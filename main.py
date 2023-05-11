@@ -1,4 +1,7 @@
 import json
+import os
+import getpass
+import hashlib
 from cryptography.fernet import Fernet
 
 PASSWORD_FILE = 'passwords.json'
@@ -26,4 +29,38 @@ def main():
             break
         else:
             print("Invalid choice. Please try again.")
+
+# Defining Functions
+def show_passwords():
+    if not os.path.isfile(PASSWORD_FILE):
+        print("No passwords saved yet.")
+        return
+    
+    with open(PASSWORD_FILE, 'r') as f:
+        passwords = json.load(f)
+
+    print("Here are your saved passwords:")
+    for site, password in passwords.items():
+        print(f"{site}: {decrypt_password(password)}")
+
+def add_password():
+    site = input("Enter the site name: ")
+    password = getpass.getpass("Enter the password: ")
+
+    with open(PASSWORD_FILE, 'a+') as f:
+        f.seek(0)
+        contents = f.read()
+        if contents:
+            passwords = json.loads(contents)
+        else:
+            passwords = {}
+        
+        passwords[site] = encrypt_password(password)
+
+        f.seek(0)
+        f.truncate()
+        json.dump(passwords, f)
+    
+    print("Password saved successfully.")
+
 main()
