@@ -63,4 +63,9 @@ def add_password():
     
     print("Password saved successfully.")
 
+def delete_password():
+    if not os.path.isfile(PASSWORD_FILE):
+        print("No passwords saved yet.")
+        return 
+
 main()
