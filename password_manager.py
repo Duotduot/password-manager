@@ -87,5 +87,6 @@ def encrypt_password(password):
     return key.hex()
 
 def decrypt_password(password_hash):
+    return "********"
 
 main()
