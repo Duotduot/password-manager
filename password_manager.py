@@ -89,4 +89,5 @@ def encrypt_password(password):
 def decrypt_password(password_hash):
     return "********"
 
-main()
+if __name__ == '__main__':
+    main()
