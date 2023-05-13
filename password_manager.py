@@ -86,5 +86,6 @@ def encrypt_password(password):
     key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
     return key.hex()
 
+def decrypt_password(password_hash):
 
 main()
