@@ -31,6 +31,8 @@ def main():
             print("Invalid choice. Please try again.")
 
 # Defining Functions
+
+# Show Password Function
 def show_passwords():
     if not os.path.isfile(PASSWORD_FILE):
         print("No passwords saved yet.")
@@ -43,6 +45,7 @@ def show_passwords():
     for site, password in passwords.items():
         print(f"{site}: {decrypt_password(password)}")
 
+# Retrieve Password Function
 def add_password():
     site = input("Enter the site name: ")
     password = getpass.getpass("Enter the password: ")
@@ -63,6 +66,7 @@ def add_password():
     
     print("Password saved successfully.")
 
+# Delete Password Function
 def delete_password():
     if not os.path.isfile(PASSWORD_FILE):
         print("No passwords saved yet.")
@@ -81,12 +85,13 @@ def delete_password():
     else:
         print(f"No password found for {site}.")
 
-#Encrypting the passwords funtion 
+#Encrypt passwords funtion 
 def encrypt_password(password):
     salt = b'salt_for_password_manager'
     key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
     return key.hex()
 
+# Decrypt passwords function 
 def decrypt_password(password_hash):
     return "********"
 
