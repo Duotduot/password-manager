@@ -81,4 +81,6 @@ def delete_password():
     else:
         print(f"No password found for {site}.")
 
+def encrypt_password(password):
+
 main()
