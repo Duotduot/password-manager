@@ -81,6 +81,7 @@ def delete_password():
     else:
         print(f"No password found for {site}.")
 
+#Encrypting the passwords funtion 
 def encrypt_password(password):
     salt = b'salt_for_password_manager'
     key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
