@@ -39,11 +39,11 @@ Used a project management platform called Monday. Screenshots of the project pla
 **Installation**  
 - Have Python3 installed on your system  
 - Download the source code for the Password Manager  
-- Run the app by executing the following command in the command line; *'python3 password_manager.py'*  
+- Run the app by executing the following command in the command line; *'python3 password_manager.py'*    
 **Dependencies**  
-Cryptography - used for encrypting and decrypting passwords  
+Cryptography - used for encrypting and decrypting passwords    
 **System/Hardware Requirements**  
-The app runs on any system that has Python 3 installed. There are no specific hardware requirements.  
+The app runs on any system that has Python 3 installed. There are no specific hardware requirements.    
 **Usage**  
 - **Show Passwords** - This option shows/retrieves saved passwords from the password manager.  
 - **Add Password** - This option adds a new password to the password manager.  
