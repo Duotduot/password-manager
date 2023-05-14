@@ -33,4 +33,19 @@ PEP 8 is the style guide used in this application. Some of the PEP 8 styling con
 Used a project management platform called Monday. Screenshots of the project plan are attached below.  
 ![Screenshot 1](./docs/screenshot_1.jpeg)
 ![Screenshot 2](./docs/screenshot_2.jpeg)
-![Screenshot 3](./docs/screenshot_3.jpeg)
+![Screenshot 3](./docs/screenshot_3.jpeg)  
+
+## Help  
+**Installation**  
+- Have Python3 installed on your system  
+- Download the source code for the Password Manager  
+- Run the app by executing the following command in the command line; *'python3 password_manager.py'*  
+**Dependencies**  
+Cryptography - used for encrypting and decrypting passwords  
+**System/Hardware Requirements**  
+The app runs on any system that has Python 3 installed. There are no specific hardware requirements.  
+**Usage**  
+- **Show Passwords** - This option shows/retrieves saved passwords from the password manager.  
+- **Add Password** - This option adds a new password to the password manager.  
+- **Delete Password** - This option deletes the password from the password manager.  
+- **Exit** - This option exits the application.
